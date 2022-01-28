@@ -1,4 +1,3 @@
-from multiprocessing.connection import Client
 import requests
 import requests.auth
 import json
@@ -56,3 +55,17 @@ def write_token(token):
 
     with open('db.json', 'w') as db:
         json.dump(token_data, db)
+
+
+def set_memory(count, id):
+    previous = {
+        "count": count,
+        "last_id": id
+    }
+    with open('memory.json', 'w') as mem:
+        json.dump(previous, mem)
+
+
+def get_memory():
+    with open('memory.json', 'r') as mem:
+        return json.load(mem)

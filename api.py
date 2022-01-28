@@ -21,8 +21,8 @@ def post_api(auth_token, path, body):
     }
     response = requests.post(
         f"https://oauth.reddit.com/{path}", headers=headers, data=body)
-
-    return response.json()
+    if response:
+        return response.json()
 
 # Submits a new post to a subreddit
 

@@ -2,5 +2,5 @@
 
 -   Checks my example subreddit for new posts.
 -   Adds the comment "Groovy", if there was a new post added.
--   Has the ability to write new posts too.
+-   When there are no new posts it gets bored and makes a post itself.
 -   Still a work in progress.
